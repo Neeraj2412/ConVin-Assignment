@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>ConVin Assignment</title>
+</head>
+
+<body>
+    <style>
+        body {
+            padding: 0px;
+            margin: 0px;
+            background-color: aliceblue;
+        }
+    </style>
+    <div class="container mx-auto text-center my-auto mt-5">
+        <img src="https://1.bp.blogspot.com/-c_OXypVPQkI/YLSos4-ge0I/AAAAAAAACLQ/mIG8s7UFeygROpyQAvizaknRhzIN1S_1ACLcBGAsYHQ/s3619/Convin%2BLogo.png
+    " alt="" class="img-fluid text-center">
+        <h1 class="mt-5 pt-2 text-primary text-center">Below are the Events</h1>
+    </div>
+    <div class="container mx-auto my-auto mt-5">
+        <div class="table table-borderless table-dark table-responsive-xl" style="background-color: #32383e;">
+            <table class="table mx-auto" style="color: #fff;">
+                <thead>
+                    <tr>
+                        <th>Summary</th>
+                        <th>Description</th>
+                        <th>Location</th>
+                        <th>Updated</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for key in events.items %}
+                    <tr>
+                        <td>{{ key.summary}}</td>
+                        <td>{{ key.description }}</td>
+                        <td>{{ key.location }}</td>
+                        <td>{{ key.updated }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+          </div>
+    </div>
+</body>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+
+</html>
